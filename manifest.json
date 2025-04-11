@@ -1,0 +1,49 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.0",
+    "id": "{{PLUGIN_ID}}",
+    "packageName": "com.okrtreesoftware.app",
+    "developer": {
+        "name": "OKR Tree Software",
+        "websiteUrl": "https://okrtreesoftware.com",
+        "privacyUrl": "https://okrtreesoftware.com/privacy",
+        "termsOfUseUrl": "https://okrtreesoftware.com/terms"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "OKR Tree",
+        "full": "OKR Tree Software"
+    },
+    "description": {
+        "short": "An OKR Tree management application",
+        "full": "A comprehensive OKR Tree management application for tracking objectives and tasks."
+    },
+    "accentColor": "#FFFFFF",
+    "staticTabs": [
+        {
+            "entityId": "index",
+            "name": "OKR Tree",
+            "contentUrl": "https://{{WEBSITE_URL}}/",
+            "websiteUrl": "https://{{WEBSITE_URL}}/",
+            "scopes": ["personal"]
+        },
+        {
+            "entityId": "tasks",
+            "name": "Your Tasks",
+            "contentUrl": "https://{{WEBSITE_URL}}/tasks",
+            "websiteUrl": "https://{{WEBSITE_URL}}/tasks",
+            "scopes": ["personal"]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "{{WEBSITE_URL}}"
+    ]
+} 

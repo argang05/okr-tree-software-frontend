@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OKR Tree Software Frontend
+
+A comprehensive OKR (Objectives and Key Results) tree management application built with Next.js, Tailwind CSS, and Shadcn UI.
 
 ## Getting Started
 
@@ -6,31 +8,68 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- User Authentication (Login/Register)
+- OKR Tree Visualization
+- Objective Management (Create, Update, Delete)
+- Task Management (Create, Update, Delete)
+- User Task Dashboard
+- Account Management
 
-## Learn More
+## Publishing as a Microsoft Teams Plugin
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. A Microsoft 365 developer account
+2. App Studio installed in Microsoft Teams
+3. Your application deployed to a publicly accessible HTTPS endpoint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Steps to Publish for Free
 
-## Deploy on Vercel
+1. **Update the manifest.json file**:
+   - Replace `{{PLUGIN_ID}}` with a unique GUID (generate one at https://www.guidgen.com)
+   - Replace `{{WEBSITE_URL}}` with your deployed application URL (without https://)
+   - Update other placeholders as needed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Create icons**:
+   - Create `color.png` (192x192 pixels)
+   - Create `outline.png` (32x32 pixels)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Package your app**:
+   - Zip the following files together:
+     - manifest.json
+     - color.png
+     - outline.png
+
+4. **Upload to Microsoft Teams**:
+   - Open Microsoft Teams
+   - Go to Apps > Manage your apps > Upload an app
+   - Select "Upload a custom app"
+   - Choose your zip file
+
+5. **For organization-wide deployment**:
+   - Submit your app to your organization's app catalog
+   - This requires admin approval but is free
+
+### Development Testing
+
+For testing during development:
+1. Use ngrok to create a tunnel to your local server:
+   ```bash
+   ngrok http 3000
+   ```
+2. Update the manifest.json with the ngrok URL
+3. Package and upload to Teams as described above
+
+### Free Publishing Options
+
+1. **Side-loading**: Distribute the zip package directly to users (up to 500 users)
+2. **Org App Catalog**: Free for internal distribution within your organization
+3. **Developer Portal**: Use the Teams Developer Portal for easier management
+
+For more information, visit [Microsoft Teams Platform Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/)
