@@ -475,7 +475,7 @@ export default function OKRTree() {
           pathFunc="step"
           separation={{ siblings: 2.5, nonSiblings: 3.5 }}
           translate={{ x: window.innerWidth / 2, y: 160 }}
-          nodeSize={{ x: 350, y: 250 }}
+          nodeSize={{ x: 350, y: 400 }}
           collapsible={false}
           renderCustomNodeElement={(rd3tProps) => (
             <CustomNode
