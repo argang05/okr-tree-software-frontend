@@ -165,6 +165,9 @@ export default function Tasks() {
                   <div className="mb-4">
                     <p className="text-sm text-slate-600">{task.description}</p>
                   </div>
+                  <div className="mb-4">
+                    <p className="text-sm text-slate-600">Assumption: {task.assumption ? task.assumption : "No assumption"}</p>
+                  </div>
                   <div className="mt-4">
                     <div className="flex justify-between text-sm mb-1">
                       <span>Progress</span>

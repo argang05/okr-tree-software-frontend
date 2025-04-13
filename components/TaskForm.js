@@ -44,6 +44,7 @@ export default function TaskForm({
       description: '',
       dueDate: new Date().toISOString().split('T')[0],
       status: 'PENDING',
+      assumption: '',
       assignedTo: [],
       progressPercentage: 0,
     },
@@ -81,6 +82,7 @@ export default function TaskForm({
       setValue('status', task.status || 'PENDING');
       setValue('assignedTo', task.assignedTo || []);
       setValue('progressPercentage', task.progressPercentage || 0);
+      setValue('assumption', task.assumption || '');
       
       setSelectedUsers(task.assignedTo || []);
     }
@@ -94,6 +96,7 @@ export default function TaskForm({
         description: '',
         dueDate: new Date().toISOString().split('T')[0],
         status: 'PENDING',
+        assumption: '',
         assignedTo: [],
         progressPercentage: 0,
       });
@@ -182,6 +185,19 @@ export default function TaskForm({
               placeholder="Enter task description"
               rows={3}
               {...register('description', { required: 'Description is required' })}
+            />
+            {errors.description && (
+              <p className="text-sm text-red-500">{errors.description.message}</p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="description">Assumption</Label>
+            <Textarea
+              id="assumption"
+              placeholder="Enter task assumption"
+              rows={3}
+              {...register('assumption', { required: 'assumption is required' })}
             />
             {errors.description && (
               <p className="text-sm text-red-500">{errors.description.message}</p>

@@ -273,7 +273,7 @@ export default function TaskList({ objectiveId, onRefresh }) {
       
       {/* Task Details Dialog */}
       <Dialog open={showTaskDetails} onOpenChange={setShowTaskDetails}>
-        <DialogContent>
+        <DialogContent className="overflow-y-scroll overflow-x-auto">
           <DialogHeader>
             <DialogTitle>{selectedTask?.title}</DialogTitle>
           </DialogHeader>
@@ -282,6 +282,10 @@ export default function TaskList({ objectiveId, onRefresh }) {
               <div>
                 <h4 className="text-sm font-medium text-slate-500">Description</h4>
                 <p className="mt-1">{selectedTask?.description}</p>
+              </div>
+              <div>
+                <h4 className="text-sm font-medium text-slate-500">Assumption</h4>
+                <p className="mt-1">{selectedTask?.assumption ? selectedTask?.assumption : "No Assumption!"}</p>
               </div>
               
               <div>
