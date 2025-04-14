@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
   "version": "1.0.0",
-  "id": "9f5baec7-d182-492b-86d1-2ce7a7b392d3",
+  "id": "b7331b13-9803-4daa-9967-cd2af99455c4",
   "packageName": "com.okrtree.app",
   "developer": {
     "name": "Abhirup Ganguly",
