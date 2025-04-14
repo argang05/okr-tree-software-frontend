@@ -29,7 +29,7 @@
       "name": "OKR Tree",
       "contentUrl": "https://okr-tree-software.vercel.app/",
       "websiteUrl": "https://okr-tree-software.vercel.app/",
-      "scopes": ["personal"]
+      "scopes": ["personal", "team", "groupchat"]
     }
   ],
   "permissions": ["identity", "messageTeamMembers"],
