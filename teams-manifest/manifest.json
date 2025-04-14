@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "9f5baec7-d182-492b-86d1-2ce7a7b392d3",
+  "packageName": "com.okrtree.app",
+  "developer": {
+    "name": "Abhirup Ganguly",
+    "websiteUrl": "https://okr-tree-software.vercel.app",
+    "privacyUrl": "https://okr-tree-software.vercel.app/",
+    "termsOfUseUrl": "https://okr-tree-software.vercel.app/"
+  },
+  "name": {
+    "short": "OKR Tree",
+    "full": "OKR Tree Software"
+  },
+  "description": {
+    "short": "Visualize and manage OKRs in a tree view.",
+    "full": "This app helps you manage Objectives and Key Results in a visual hierarchy."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#6200EE",
+  "staticTabs": [
+    {
+      "entityId": "okrTreeHome",
+      "name": "OKR Tree",
+      "contentUrl": "https://okr-tree-software.vercel.app/",
+      "websiteUrl": "https://okr-tree-software.vercel.app/",
+      "scopes": ["personal"]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": ["okr-tree-software.vercel.app","okr-tree-app-backend-9mcm.onrender.com"]
+}
